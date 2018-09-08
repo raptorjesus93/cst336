@@ -23,3 +23,53 @@ nav a:hover{
 footer {
     clear: left;
 }
+table{
+    margin: 0px auto;
+}
+td{
+    padding-right: 10px;
+    font-size: 1.3em;
+}
+td strong{
+    color: orange;
+}
+#table-header{
+    background-color: #351A00;
+}
+.table-row{
+    background-color: #753900;
+}
+ul{
+    text-align: left;
+    padding-left: 200px;
+}
+.hobby{
+    color: yellow;
+}
+#welcomeText {
+    text-align: left;
+}
+#contact{
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+}
+#index{
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+}
+#about{
+    border-bottom: 2px orange solid;
+    font-size: 2em;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+footer span{
+    color: orange;
+    font-size: 12px;
+}
+#content{
+    text-align: center;
+}
