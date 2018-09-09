@@ -23,6 +23,7 @@
                         case 0: 
                             $totalPoints = 1000;
                             echo "<h1>Jackpot!</h1>";
+                            echo "<audio src='audio/jackpot.mp3' autoplay></audio>";
                             break;
                         case 1:
                             $totalPoints = 500;
