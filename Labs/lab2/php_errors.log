@@ -1,0 +1,4 @@
+[09-Sep-2018 18:52:34 UTC] PHP Parse error:  syntax error, unexpected 'case' (T_CASE) in /home/ubuntu/workspace/cst336/Labs/lab2/777/index.php on line 25
+[09-Sep-2018 19:48:40 UTC] PHP Fatal error:  Cannot redeclare displaySymbol() (previously declared in /home/ubuntu/workspace/cst336/Labs/lab2/777/index.php:15) in /home/ubuntu/workspace/cst336/Labs/lab2/777/inc/functions.php on line 2
+[09-Sep-2018 19:48:40 UTC] PHP Stack trace:
+[09-Sep-2018 19:48:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/Labs/lab2/777/index.php:0
