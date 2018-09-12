@@ -1,0 +1,9 @@
+h1{
+    background-color: black;
+    color: white;
+}
+div{
+    float: left;
+    display: inline-block;
+    
+}
