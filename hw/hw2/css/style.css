@@ -1,12 +1,17 @@
 body{
     text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #b6b5ca;
+    /*background-color: #141311;*/
+    background-color: #252120;
 }
 .text{
-    border: 1px solid black;
+    border: 1px solid #b6b5ca;
     width: 75px;
     height: 75px;
     font-size: 36px;
     text-align: center;
+    background-color: #252120;
 }
 form{
     margin: 0 auto;
@@ -21,4 +26,10 @@ form{
 .button:hover{
   background-color: #46000D;
   color: white;
+}
+header{
+    background-image: url("img/tictactor.png");
+}
+hr{
+    color: #b6b5ca;
 }

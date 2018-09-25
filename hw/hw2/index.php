@@ -48,13 +48,13 @@
 </head>
 <body>
 	<header>
-		<h1>Tic Tac Toe</h1>
+		<img src="img/tictactoe.png" alt="tic tac toe " height="150">
 	</header>
 	<hr>
-	
+	<h3>Player 'o' starts: </h3>
 	<?php
 	if ($winner == 'o'){
-		echo "<h2>Player 'o' is the winner!</h2>";
+		echo "<h2>Congratulations player 'o' is the winner!</h2>";
 	}
 	else if ($winner == 'x'){
 		echo "<h2>Player 'x' is the winner!</h2>";
