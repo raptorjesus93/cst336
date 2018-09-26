@@ -16,7 +16,6 @@ body{
 }
 form{
     margin: 0 auto;
-   
 }
 .button{
     margin-top: 10px;
@@ -34,4 +33,7 @@ header{
 hr{
     color: #b6b5ca;
     width: 80%;
+}
+footer{
+    text-align: center;
 }
