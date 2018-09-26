@@ -12,10 +12,11 @@ body{
     font-size: 36px;
     text-align: center;
     background-color: #252120;
+    color: #b6b5ca;
 }
 form{
     margin: 0 auto;
-   color: #b6b5ca;
+   
 }
 .button{
     margin-top: 10px;
