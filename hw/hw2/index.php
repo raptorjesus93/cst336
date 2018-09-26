@@ -57,7 +57,8 @@
 		echo "<h2>Congratulations player 'o' is the winner!</h2>";
 	}
 	else if ($winner == 'x'){
-		echo "<h2>Player 'x' is the winner!</h2>";
+		echo "<h2>You lose!</h2>";
+		echo "<img src='img/smiley.jpg' alt='A smiley.'>";
 	}
 	else if($winner == 'tied'){
 		echo "<h2>The game is a tie.</h2>";

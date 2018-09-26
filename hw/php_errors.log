@@ -21,3 +21,4 @@
 [23-Sep-2018 00:47:46 UTC] PHP Stack trace:
 [23-Sep-2018 00:47:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/hw/hw2/index.php:0
 [23-Sep-2018 02:04:41 UTC] PHP Parse error:  syntax error, unexpected 'button' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 75
+[26-Sep-2018 19:47:49 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/cst336/hw/hw2/index.php on line 62
