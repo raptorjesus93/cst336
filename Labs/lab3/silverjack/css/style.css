@@ -1,0 +1,58 @@
+body{
+    font-family: arcadefont;
+    /*background: #00951E;*/
+    background-image: url("../img/poker.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.time{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.player{
+    position: relative;
+}
+.playerHand {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+#playerName{
+    position: absolute;
+    left: 50;
+}
+.avatar{
+    position: absolute;
+    left: 100px;
+    bottom: 4px;
+}
+.title{
+    text-align: center;
+}
+.card {
+    margin: 0px 3px;
+}
+.individualScore{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+hr {
+    width: 90%;
+}
+form{
+    text-align: center;
+    margin-top: 5px;
+}
+input{
+    padding: 5px;
+    background-color: #E3E1B8;
+    
+}
+input:hover{
+  background-color: #46000D;
+  color: white;
+}
