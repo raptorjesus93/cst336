@@ -2,6 +2,7 @@ body{
     font-family: 'Arial', sans-serif;
     color: #b6b5ca;
     background-color: #252120;
+    text-align: center;
 }
 .text{
     border: 1px solid #b6b5ca;
@@ -24,17 +25,10 @@ body{
 }
 header{
     background-image: url("img/tictactor.png");
-    text-align: center;
 }
 hr{
     color: #b6b5ca;
 }
-footer{
-    text-align: center;
-}
 .main{
     display: flex;
-}
-.game{
-     text-align: center;   
 }
