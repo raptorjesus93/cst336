@@ -1,0 +1,31 @@
+[15-Oct-2018 19:54:41 UTC] PHP Parse error:  syntax error, unexpected 'displayCalendar' (T_STRING) in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 3
+[15-Oct-2018 19:55:11 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 19:57:01 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 8
+[15-Oct-2018 19:57:02 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 8
+[15-Oct-2018 19:57:04 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 8
+[15-Oct-2018 19:58:55 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 19:58:56 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:01:29 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:01:30 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:01:31 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:01:53 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:01:55 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:02:07 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:02:10 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:02:34 UTC] PHP Parse error:  syntax error, unexpected ',', expecting ']' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:03:19 UTC] PHP Parse error:  syntax error, unexpected ']', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:03:20 UTC] PHP Parse error:  syntax error, unexpected ']', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:06:17 UTC] PHP Parse error:  syntax error, unexpected ']', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:07:06 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:07:08 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ';' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 7
+[15-Oct-2018 20:09:30 UTC] PHP Parse error:  syntax error, unexpected '%' in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 77
+[15-Oct-2018 20:10:07 UTC] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 77
+[15-Oct-2018 20:34:00 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 9
+[15-Oct-2018 20:34:00 UTC] PHP Stack trace:
+[15-Oct-2018 20:34:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice1.php:0
+[15-Oct-2018 20:34:00 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice1.php:80
+[15-Oct-2018 20:34:09 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 9
+[15-Oct-2018 20:34:09 UTC] PHP Stack trace:
+[15-Oct-2018 20:34:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice1.php:0
+[15-Oct-2018 20:34:09 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice1.php:80
+[15-Oct-2018 20:47:52 UTC] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR) in /home/ubuntu/workspace/cst336/practice/midterm_practice1.php on line 17
