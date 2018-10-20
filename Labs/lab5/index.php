@@ -1,27 +1,37 @@
 <?php
     include "wmapi.php";
     include "functions.php";
+    
     session_start();
     
     if (!isset($_SESSION['cart'])){
         $_SESSION['cart'] = array();
     }
+    
+    if(isset($_GET['query'])){
+        $items = getProducts($_GET['query']);
+        echo "<br><br><br>";
+        //print_r($items);
+    }    
+    
     if (isset($_POST['itemName'])){
         $newItem = array();
         $newItem['name'] = $_POST['itemName'];
         $newItem['price'] = $_POST['itemPrice'];
         $newItem['image'] = $_POST['itemImage'];
         $newItem['id'] = $_POST['itemId'];
-
-        $_SESSION['cart'][] = $newItem;
-        //array_push($_SESSION['cart'], $_POST['itemName']);
+        
+        foreach ($_SESSION['cart'] as &$item){
+            if ($newItem['id'] == $item['id']){
+                $item['quantity'] += 1;
+                $found = true;
+            }
+        }
+        if ($found != true){
+            $newItem['quantity'] = 1;
+            array_push($_SESSION['cart'], $newItem);
+        }
     }
-    if(isset($_GET['query'])){
-        $items = getProducts($_GET['query']);
-        echo "<br><br><br>";
-        //print_r($items);
-    }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,6 +43,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <title>Products Page</title>
+        
+        <style>
+            footer{
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
     <div class='container'>
@@ -46,7 +62,9 @@
                     </div>
                     <ul class='nav navbar-nav'>
                         <li><a href='index.php'>Home</a></li>
-                        <li><a href='scart.php'>Cart</a></li>
+                        <li><a href='scart.php'>
+                        <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>
+                        Cart: <?php displayCartCount(); ?></a></li>
                     </ul>
                 </div>
             </nav>
@@ -63,9 +81,21 @@
             </form>
             
             <!-- Display Search Results -->
-            <?php displayResults() ?>
+            <?php displayResults(); ?>
             
         </div>
     </div>
+        <footer>
+            <hr>
+             
+            <span>cst 336, 2018&copy; Fernandez <br>
+            <strong>Disclaimer:</strong> The information in this website is fictitous. <br>
+            It is used for academic purposes only.</span>
+            <br>
+            
+            <img src="../../img/csumb_logo.png" alt="CSUMB logo">
+            <img src="../../img/buddy_verified.png" alt="buddy badge">
+        
+        </footer>
     </body>
 </html>
