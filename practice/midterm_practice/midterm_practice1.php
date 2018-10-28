@@ -1,5 +1,3 @@
-
-
 <?php
 session_start();
 if (!isset($_SESSION['itinerary'])){
@@ -8,10 +6,6 @@ if (!isset($_SESSION['itinerary'])){
 $months = array("November"=>30, "December"=>31, "January"=>31, "February"=>29);
 
 $images = array();
-
-
-//print_r($France);
-//$France = array("img/France/bordeaux.png");
 
 function displayCalendar($month){
     global $months;
@@ -23,16 +17,27 @@ function displayCalendar($month){
         $images[] = $entry;
     }
     
+    
     $count = 1;
+    $j = 0;
     $days = $months[$month];
     $randomValues = array();
+    $randomImageIndex = array();
+    $randomImages = array();
     $locations = $_GET['numLocations'];
 
     
     for ($i = 0; $i < $_GET['numLocations']; $i++){
-        $randomValues[] = rand(1, $days);
+        $randomImageIndex[] = array_rand($images);
+        $randomImages[] = $images[$randomImageIndex[$i]];
+        $temp = rand(1, $days);
+        while(in_array($temp, $randomValues)){
+            $temp = rand(1, $days);
+        }
+        $randomValues[] = $temp;
     }
-    
+    sort($randomImages);
+    print_r($randomImages);
     
     echo "<h1>" . $month . " Itinerary </h1>";
     echo "<h2> Visiting " . $_GET['numLocations'] . " places in " . $_GET['country'];
@@ -44,11 +49,13 @@ function displayCalendar($month){
             echo "<tr>";
         }
         echo "<td>";
-        echo $count;
+        echo $count . "<br>";
         
         foreach($randomValues as $value){
             if ($value == $count){
-                echo "<img src='img/$country/$images[0]'>";
+                $index = $randomImages[$j++];
+                echo "<img src='img/$country/$index'>";
+                echo "<br>". $index;
                 break;
             }
         }
@@ -152,7 +159,7 @@ function displayHistory(){
                     $_SESSION['itinerary'][] = $itinerary;
                     displayHistory();
                 }
-                
+                    
                 ?>
     </body>
 </html>

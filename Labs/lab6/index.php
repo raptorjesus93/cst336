@@ -8,27 +8,55 @@ function displayCategories(){
     $sql = "SELECT * FROM om_category ORDER BY catName";
     $stmt = $dbConn -> prepare($sql);
     $stmt->execute();
-    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $records = $stmt->fetchAll();
     //print_r($records);
     foreach ($records as $record){
-        echo "<option>" . $record['catName'] . "</option>";
+        echo "<option value='" .$record['catId']. "'>" . $record['catName'] . "</option>";
     }
 }
 function filterProducts(){
     global $dbConn;
-    $product = $_GET['productName'];
-    $sql = "SELECT * FROM om_product WHERE productName LIKE '%$product%' 
-    OR productDescription LIKE :product";
-    
-    $namedParameters = array();
-    $namedParameters[':product'] = "$$product%";
-    
-    $stmt = $dbConn -> prepare($sql);
-    $stmt->execute($namedParameters);
-    $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    //print_r($records);
-    foreach ($records as $record){
-        echo $record['productName'] . "<br>";
+    if (isset($_GET['submit'])){
+        echo "<h3> Products Found: <h3>";
+        
+        $namedParameters = array();
+        $product = $_GET['productName'];
+        
+        $sql = "SELECT * FROM om_product WHERE 1";
+        
+        if(!empty($_GET['productName'])){
+            $sql .= " AND productName LIKE :product OR productDescription LIKE :product";
+            $namedParameters[':product'] = "%$product%";
+        }
+        if(!empty($_GET['category'])){
+            $sql .= " AND catId = :categoryId";
+            $namedParameters[':categoryId'] = $_GET['category'];
+        }
+        if(!empty($_GET['priceFrom'])){
+            $sql .= " AND price >= :priceFrom";
+            $namedParameters[':priceFrom'] = $_GET['priceFrom'];
+        }
+        if(!empty($_GET['priceTo'])){
+            $sql .= " AND price <= :priceTo";
+            $namedParameters[':priceTo'] = $_GET['priceTo'];
+        }
+        if(isset($_GET['orderBy'])){
+            if($_GET['orderBy'] == "price"){
+                $sql .= " ORDER BY price";
+            }
+            else{
+                $sql .= " ORDER BY productName";
+            }
+        }
+        
+        $stmt = $dbConn -> prepare($sql);
+        $stmt->execute($namedParameters);
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach ($records as $record){
+            echo "<a href=\"purchaseHistory.php?productId=".$record["productId"]. "\"> History </a>";
+            echo $record['productName'] . " " . $record['productDescription'] . " $" . $record['price'] . "<br><br>";
+        }
     }
 }
 ?>
@@ -39,8 +67,8 @@ function filterProducts(){
         <meta charset="utf-8">
     </head>
     <body>
-        <h1>Ottermart</h1>
-        <h2>Product Search</h2>
+        <div>
+        <h1>Ottermart Product Search </h1>
         
         <form>
             Product: <input type="text" name="productName" placeholder="Product keyword">
@@ -50,8 +78,28 @@ function filterProducts(){
                 <option value="">Select one</option>
                 <?= displayCategories(); ?>
             </select>
+            <br>
+            
+            Price: From <input type-"text" name="priceFrom" size="7"> 
+                   To <input type-"text" name="priceTo" size="7">
+            
+            <br>
+            Order result by:
+            <br>
+            
+            <input type="radio" name="orderBy" value="price"> Price <br>
+            <input type="radio" name="orderBy" value="name"> Name
+            
+            <br><br>
             <input type="submit" name="submit" value="Search">
         </form>
+        
+        <br>
+        </div>
+        <br>
+        
+        <hr>
         <?= filterProducts(); ?>
+
     </body>
 </html>

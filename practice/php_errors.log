@@ -10,3 +10,107 @@
 [20-Oct-2018 06:48:56 UTC] PHP Stack trace:
 [20-Oct-2018 06:48:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
 [20-Oct-2018 06:48:56 UTC] PHP   2. readdir() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:11
+[21-Oct-2018 01:04:11 UTC] PHP Warning:  array_combine() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 36
+[21-Oct-2018 01:04:12 UTC] PHP Stack trace:
+[21-Oct-2018 01:04:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[21-Oct-2018 01:04:12 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:140
+[21-Oct-2018 01:04:12 UTC] PHP   3. array_combine() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:36
+[21-Oct-2018 01:04:20 UTC] PHP Warning:  array_combine() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 36
+[21-Oct-2018 01:04:20 UTC] PHP Stack trace:
+[21-Oct-2018 01:04:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[21-Oct-2018 01:04:20 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:140
+[21-Oct-2018 01:04:20 UTC] PHP   3. array_combine() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:36
+[21-Oct-2018 01:04:23 UTC] PHP Warning:  array_combine() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 36
+[21-Oct-2018 01:04:23 UTC] PHP Stack trace:
+[21-Oct-2018 01:04:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[21-Oct-2018 01:04:23 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:140
+[21-Oct-2018 01:04:23 UTC] PHP   3. array_combine() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:36
+[21-Oct-2018 01:04:25 UTC] PHP Warning:  array_combine() expects parameter 2 to be array, null given in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 36
+[21-Oct-2018 01:04:25 UTC] PHP Stack trace:
+[21-Oct-2018 01:04:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[21-Oct-2018 01:04:25 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:140
+[21-Oct-2018 01:04:25 UTC] PHP   3. array_combine() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:36
+[23-Oct-2018 21:26:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'midterm_pratice'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(8): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice2.php(4): startConnection('midterm_pratice')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 8
+[23-Oct-2018 21:27:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'midterm_pratice'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(8): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice2.php(4): startConnection('midterm_pratice')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 8
+[23-Oct-2018 21:27:49 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'midterm_pratice'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(8): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice2.php(4): startConnection('midterm_pratice')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 8
+[23-Oct-2018 21:27:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'midterm_pratice'' in /home/ubuntu/workspace/cst336/inc/dbConnection.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/inc/dbConnection.php(8): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice2.php(4): startConnection('midterm_pratice')
+#2 {main}
+  thrown in /home/ubuntu/workspace/cst336/inc/dbConnection.php on line 8
+[24-Oct-2018 06:18:08 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:08 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:08 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:18:08 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:08 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:08 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:18:08 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:08 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:08 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:18:24 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:24 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:24 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:18:24 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:24 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:24 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:18:24 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:18:24 UTC] PHP Stack trace:
+[24-Oct-2018 06:18:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:18:24 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:04 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:04 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:04 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:04 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:04 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:04 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:04 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:04 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:04 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:13 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:13 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:13 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:13 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:13 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:13 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:21:13 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:21:13 UTC] PHP Stack trace:
+[24-Oct-2018 06:21:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:21:13 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:144
+[24-Oct-2018 06:23:06 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:23:06 UTC] PHP Stack trace:
+[24-Oct-2018 06:23:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:23:06 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:145
+[24-Oct-2018 06:23:06 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:23:06 UTC] PHP Stack trace:
+[24-Oct-2018 06:23:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:23:06 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:145
+[24-Oct-2018 06:23:06 UTC] PHP Warning:  Illegal offset type in /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php on line 32
+[24-Oct-2018 06:23:06 UTC] PHP Stack trace:
+[24-Oct-2018 06:23:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:0
+[24-Oct-2018 06:23:06 UTC] PHP   2. displayCalendar() /home/ubuntu/workspace/cst336/practice/midterm_practice/midterm_practice1.php:145
