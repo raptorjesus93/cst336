@@ -34,6 +34,4 @@ if (empty($record)) {
    header('Location: admin.php'); //redirects to another program
     
 }
-
-
 ?>

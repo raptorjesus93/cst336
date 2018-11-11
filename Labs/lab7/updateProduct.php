@@ -1,7 +1,11 @@
 <?php
+session_start();
+
 include '../../inc/dbConnection.php';
 $dbConn = startConnection("ottermart");
 include 'inc/functions.php';
+validateSession();
+
 
 if (isset($_GET['updateProduct'])){  //user has submitted update form
     $productName = $_GET['productName'];
@@ -28,9 +32,7 @@ if (isset($_GET['productId'])) {
   
  // print_r($productInfo);
     
-    
 }
-
 
 ?>
 
@@ -44,7 +46,7 @@ if (isset($_GET['productId'])) {
         <h1> Updating a Product </h1>
         
         <form>
-            <input type="text" name="productId" value="<?=$productInfo['productId']?>">
+            <input type="hidden" name="productId" value="<?=$productInfo['productId']?>">
            Product name: <input type="text" name="productName" value="<?=$productInfo['productName']?>"><br>
            Description: <textarea name="description" cols="50" rows="4"> <?=$productInfo['productDescription']?> </textarea><br>
            Price: <input type="text" name="price" value="<?=$productInfo['price']?>"><br>
@@ -69,6 +71,5 @@ if (isset($_GET['productId'])) {
            <input type="submit" name="updateProduct" value="Update Product">
         </form>
         
-        
     </body>
-</html> 
+</html>
