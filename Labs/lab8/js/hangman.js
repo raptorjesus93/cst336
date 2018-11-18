@@ -3,6 +3,9 @@ var selectedHint = "";
 var board = [];
 var remainingGuesses = 6;
 var hints = 1;
+var temp;
+
+var guessedWords = [];
 
 var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
                 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
@@ -27,6 +30,7 @@ $(".hint").on("click", function() {
     showHint();
 });
 
+showGuessedWords();
 
 function startGame() {
     pickWord();
@@ -69,6 +73,8 @@ function updateWord(positions, letter) {
     updateBoard(board);
     
     if (!board.includes('_')) {
+        guessedWords.push(selectedWord);
+        createSession();        
         endGame(true);
     }
 }
@@ -121,4 +127,25 @@ function showHint(){
 	    	endGame(false);
 	    }
 	}
+}
+function showGuessedWords(){
+    if (!(sessionStorage.getItem("guessed") === null)){
+        temp = JSON.parse(sessionStorage.getItem("guessed"));
+        for (var i = 0; i < temp.length; i++){
+            $("#list").append(temp[i] + "<br>");
+        }
+    }
+}
+function createSession(){
+        if (sessionStorage.getItem("guessed") === null){
+            temp = JSON.stringify(guessedWords);
+            sessionStorage.setItem("guessed", temp);
+        }
+        else{
+            temp = JSON.parse(sessionStorage.getItem("guessed"));
+            temp.push(selectedWord);
+            
+            temp = JSON.stringify(temp);
+            sessionStorage.setItem("guessed", temp);
+        }
 }
