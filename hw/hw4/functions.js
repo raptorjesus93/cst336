@@ -6,19 +6,19 @@
 		var turns = 0;
 
 		function fillCell(id, points){
-			if (id.innerHTML == ""){
-				id.innerHTML = "<span>x</span>";
+			if ($(id).html() == ""){
+				$(id).append("<span>x</span>");
 				xPoints += points;
 				turns++;
 				if(turns == 5){
-					document.getElementById("heading").innerHTML = "The game is a tie!";
+					$("#heading").append("The game is a tie!");
 					createButton();
 				}
 				if (!checkWinner()){
 					computerTurn();
 				}
 				else{
-					document.getElementById("heading").innerHTML = "Player '" + winner + "' wins!";
+					$("#heading").append("Player '" + winner + "' wins!");
 					createButton();
 				}
 			}
@@ -39,7 +39,7 @@
 		}
 		function findEmptyCell(){
 			for (var i = 1; i < 10; i++){
-				if (document.getElementById("div" + i).innerHTML == ""){
+				if ($("#div" + i).html() == ""){
 					return true;
 				}
 			}
@@ -49,10 +49,10 @@
 			
 			if (findEmptyCell()){
 				var x = getRandomArbitrary(1, 10);
-				while (document.getElementById("div" + x).innerHTML != ""){
+				while ($("#div" + x).html() != ""){
 					x = getRandomArbitrary(1, 10);
 				}
-				document.getElementById("div" + x).innerHTML = "<span>o</span>";
+				$("#div" + x).append("<span>o</span>");
 
 				switch (x){
 					case 1:
@@ -87,7 +87,7 @@
 				}
 			}
 			if (checkWinner()){
-				document.getElementById("heading").innerHTML = "Player '" + winner + "' wins!";
+				$("#heading").append( "Player '" + winner + "' wins!");
 				createButton();
 			}
 			
@@ -95,12 +95,9 @@
 		function getRandomArbitrary(min, max) {
     		return Math.floor(Math.random() * (max - min) + min);
 		}
-		function getValue(id){
-			return document.getElementById(id).innerHTML;
-		}
 		function createButton(){
 			var button = document.createElement("INPUT");
 			button.setAttribute("type", "submit");
 			button.setAttribute("value", "Play again");
-			document.getElementById("form").appendChild(button);
+			$("#form").append(button);
 		}
