@@ -49,6 +49,8 @@
                            
                            //alert(data.city);
                            $("#city").html(data.city);
+                           $("#latitude").html(data.latitude);
+                           $("#longitude").html(data.longitude);
                            
                         
                         },
@@ -66,12 +68,12 @@
                         type: "GET",
                         url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
                         dataType: "json",
-                        data: { "": $("#zip").val() },
+                        data: { "state": $("#zip").val() },
                         success: function(data,status) {
                          $("#county").html("Select one");
 
                             for( var i = 0; i < data.length; i++){
-                        $("#county").append("<option>" + data[0].county + "</option>");
+                                $("#county").append("<option>" + data[i].county + "</option>");
                             }
                            //alert(data[0].county);
                            //$("#city").html(data.city);
@@ -115,9 +117,9 @@
                 Zip Code:    <input type="text" id="zip"><br>
                 City:  <span id="city"></span>
                 <br>
-                Latitude: 
+                Latitude: <span id="latitude"></span>
                 <br>
-                Longitude:
+                Longitude: <span id="longitude"></span>
                 <br><br>
                 State: 
                 <select id="state">
