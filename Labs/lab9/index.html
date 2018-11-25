@@ -47,9 +47,9 @@
                         data: { "zip": $("#zip").val() },
                         success: function(data,status) {
                            
-                           if (!$.trim(data)){
-                               alert();
-                                $("#noZip").html("Zip code not found");
+                           if (data == undefined){
+                               alert("empty");
+                                //$("#noZip").html("Zip code not found");
                            }
                            else{
                                $("#city").html(data.city);
