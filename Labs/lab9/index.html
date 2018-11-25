@@ -7,6 +7,7 @@
         <title>AJAX: Sign Up Page</title>
 
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
         <script>
         
             function validateForm() {
@@ -51,12 +52,10 @@
                             $("#latitude").html(data.latitude);
                             $("#longitude").html(data.longitude);
                            
-                           
-                        
                         },
-                        error: function(){
-                          $("#noZip").html("Zip code not found");  
-                        },
+                        //error: function(){
+                          //$("#noZip").html("Zip code not found");  
+                        //},
                         complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
                         }
@@ -93,25 +92,16 @@
 
             });//documentReady
             
-            
-            
-            
         </script>
-        
-        <style>
-            
-            .error{
-                color: red;
-            }
-        </style>
 
     </head>
 
     <body>
     
-       <h1> Sign Up Form </h1>
+       
     
         <form onsubmit="return validateForm()">
+            <h1> Sign Up Form </h1>
             <fieldset>
                <legend>Sign Up</legend>
                 First Name:  <input type="text"><br> 
@@ -143,7 +133,9 @@
                 
                 Type Password Again: <input id="passwordAgain" type="password"><span id="passwordMismatch" class="error"></span><br>
                 
-                <input type="submit" value="Sign up!">
+                <div id="button">
+                    <input class="button" type="submit" value="Sign up!">
+                </div>
             </fieldset>
         </form>
 
