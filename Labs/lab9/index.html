@@ -47,17 +47,15 @@
                         data: { "zip": $("#zip").val() },
                         success: function(data,status) {
                            
-                           if (data.trim()==''){
-                               alert("empty");
-                                //$("#noZip").html("Zip code not found");
-                           }
-                           else{
-                               $("#city").html(data.city);
-                               $("#latitude").html(data.latitude);
-                               $("#longitude").html(data.longitude);
-                           }
+                            $("#city").html(data.city);
+                            $("#latitude").html(data.latitude);
+                            $("#longitude").html(data.longitude);
+                           
                            
                         
+                        },
+                        error: function(){
+                          $("#noZip").html("Zip code not found");  
                         },
                         complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
