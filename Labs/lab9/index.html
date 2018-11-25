@@ -47,8 +47,7 @@
                         data: { "zip": $("#zip").val() },
                         success: function(data,status) {
                            
-                           //alert(data.city);
-                           if (data.length == 0){
+                           if (!$.trim(data)){
                                 $("#noZip").html("Zip code not found");
                            }
                            else{
@@ -92,31 +91,7 @@
                     });//ajax
                    
                 }); // state event
-                $("#username").change(function(){
-                    $.ajax({
 
-                        type: "GET",
-                        url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php",
-                        dataType: "json",
-                        data: { "username": $("#username").val() },
-                        success: function(data,status) {
-                        // $("#county").html("Select one");
-
-                            for( var i = 0; i < data.length; i++){
-                                $("#test").html(data[i].username + "<br>");
-                            }
-                           //alert(data[0].county);
-                           //$("#city").html(data.city);
-                           
-                        
-                        },
-                        complete: function(data,status) { //optional, used for debugging purposes
-                        //alert(status);
-                        }
-                        
-                    });//ajax
-                   
-                }); // state event
             });//documentReady
             
             
@@ -172,8 +147,6 @@
                 <input type="submit" value="Sign up!">
             </fieldset>
         </form>
-    <div id="test">
-        
-    </div>
+
     </body>
 </html>
