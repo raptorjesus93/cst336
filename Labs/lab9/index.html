@@ -47,7 +47,7 @@
                         data: { "zip": $("#zip").val() },
                         success: function(data,status) {
                            
-                           if (data == undefined){
+                           if (data.trim()==''){
                                alert("empty");
                                 //$("#noZip").html("Zip code not found");
                            }
