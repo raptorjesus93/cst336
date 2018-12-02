@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice 9</title>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        
+        <style>
+            table tr td {
+                border: 1px solid black;
+            }
+        </style>
+        
+        <script>
+            var cost;
+            var total;
+        
+            $("document").ready(function() {
+                $("#price1").change(function(){
+                    productTotal();
+                });
+                $("#quantity2").change(function(){
+                    productTotal();
+                });
+                
+                $(".productTotal").change(function(){
+                    $("#costTotal").html("$" + total);
+                });                
+            });
+            
+            function 
+            
+            function productTotal(id){
+                cost = $(".unitPrice").val() * $(".unitQuantity").val();
+                total = cost;
+                $(".productTotal").html("$" + cost);
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+        
+        <h1> Cart </h1>
+        
+        <table>
+            <tr>
+                <td>Product </td>
+               <td> Unit Price </td>
+               <td>Quantity </td>
+               <td>Total</td>
+            </tr>
+            <tr>
+                <td>Fruit Cake</td>
+                <td> $<input id="price1" type="text" onchange="return productTotal(this)"></td>
+                <td> <input id="quantity1" type="text"></td>
+                <td id="productTotal1"> </td>
+            </tr>
+            <tr>
+                <td>Pinata (medium size)</td>
+                <td> $<input id="price2" type="text"></td>
+                <td> <input id="quantity2" type="text"></td>
+                <td id="productTotal2"> </td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Dubtotal</td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Tax (10%)</td>
+                <td> <input type="text"></td>
+                <td> <input type="text"></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td id="costTotal"></td>
+            </tr>
+        </table>
+        
+        <h1>Shipping & Handling</h1>
+        
+        <form>
+            
+            <input type="radio" name="shipping"> Next-Day Delivery: $15.00
+            <input type="radio" name="shipping"> Three-Day Delivery: $10.00
+            <input type="radio" name="shipping"> Regular-shipping (5-8 days): $5.00s 
+
+        </form>
+        
+    </body>
+</html>
