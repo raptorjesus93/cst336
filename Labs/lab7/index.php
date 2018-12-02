@@ -1,3 +1,9 @@
+<?php
+    if ($_GET["submit"]) {
+        echo "Wrong username or password!!";
+        //exit;
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>

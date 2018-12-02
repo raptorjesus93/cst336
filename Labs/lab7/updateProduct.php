@@ -3,6 +3,7 @@ session_start();
 
 include '../../inc/dbConnection.php';
 $dbConn = startConnection("ottermart");
+$namedParameters = array();
 include 'inc/functions.php';
 validateSession();
 
@@ -21,8 +22,17 @@ if (isset($_GET['updateProduct'])){  //user has submitted update form
                catId = :catId,
                productImage = :productImage
             WHERE productId = " . $_GET['productId'];
-         
     
+    $namedParameters[":productName"] = $productName;
+    $namedParameters[":productDescription"] = $description;
+    $namedParameters[":price"] = $price;
+    $namedParameters[":catId"] = $catId;
+    $namedParameters[":productImage"] = $image;
+    
+    $stmt= $dbConn->prepare($sql);
+    $stmt->execute($namedParameters);
+
+    header("location: admin.php");
 }
 
 
