@@ -1,6 +1,6 @@
 <?php
 include '../../inc/dbConnection.php';
-$dbConn = startConnection("c9");
+$dbConn = startConnection();
 
 function getAllPets(){
     global $dbConn;

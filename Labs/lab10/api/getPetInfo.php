@@ -1,7 +1,7 @@
 <?php
 
 include '../../../inc/dbConnection.php';
-$dbConn = startConnection("c9");
+$dbConn = startConnection();
 
 $sql ="SELECT * FROM pets WHERE id = ".$_GET['petid'];
 $stmt = $dbConn->prepare($sql);
