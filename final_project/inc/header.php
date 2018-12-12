@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Final Project</title>
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-</head>
-<body>
-	
 	<header class="site-header">
 	  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
 	    <div class="container">
@@ -29,7 +12,7 @@
 	        </div>
 	        <!-- Navbar Right Side -->
 	        <div class="navbar-nav">
-	          <a class="nav-item nav-link" href="logIn.php">Admin Login</a>
+	          <a id="button" class="nav-item nav-link" href="logIn.php">Admin Login</a>
 	          <!--<a class="nav-item nav-link" href="">Register</a>-->
 	        </div>
 	      </div>

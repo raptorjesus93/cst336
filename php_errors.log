@@ -1,0 +1,18 @@
+[12-Dec-2018 01:20:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/ubuntu/workspace/cst336/final_project/addProduct.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/addProduct.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/addProduct.php on line 24
+[12-Dec-2018 01:22:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'name' cannot be null' in /home/ubuntu/workspace/cst336/final_project/addProduct.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/addProduct.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/addProduct.php on line 24
+[12-Dec-2018 05:20:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 6' in /home/ubuntu/workspace/cst336/final_project/updateProduct.php:28
+Stack trace:
+#0 /home/ubuntu/workspace/cst336/final_project/updateProduct.php(28): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/cst336/final_project/updateProduct.php on line 28
+[12-Dec-2018 08:29:30 UTC] PHP Parse error:  syntax error, unexpected ';', expecting '{' in /home/ubuntu/workspace/cst336/final_project/inc/functions.php on line 125
+[12-Dec-2018 08:29:30 UTC] PHP Stack trace:
+[12-Dec-2018 08:29:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/cst336/final_project/index.php:0
